@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="18000" name="TILT_CTRL">
+      <description>Messages related to the tilt control</description>
+      <field type="uint8_t" name="tilt_angle">uint8_t</field>
+    </message>
+  </messages>
+</mavlink>
