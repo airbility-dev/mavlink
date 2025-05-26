@@ -1,10 +1,14 @@
 <?xml version="1.0"?>
 <mavlink>
-  <version>3</version>
+  <include>common.xml</include>
   <messages>
-    <message id="18000" name="TILT_CTRL">
-      <description>Messages related to the tilt control</description>
-      <field type="uint8_t" name="tilt_angle">uint8_t</field>
+    <message id="18000" name="TILT_ANGLE">
+      <description>Tilt angle command.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="float" name="tilt_fl" units="deg">Front left tilt angle</field>
+      <field type="float" name="tilt_fr" units="deg">Front right tilt angle</field>
+      <field type="float" name="tilt_rl" units="deg">Right left tilt angle</field>
+      <field type="float" name="tilt_rr" units="deg">Right right tilt angle</field>
     </message>
   </messages>
 </mavlink>
