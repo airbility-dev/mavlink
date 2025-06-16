@@ -7,8 +7,8 @@
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="float" name="tilt_fl" units="deg">Front left tilt angle</field>
       <field type="float" name="tilt_fr" units="deg">Front right tilt angle</field>
-      <field type="float" name="tilt_rl" units="deg">Right left tilt angle</field>
-      <field type="float" name="tilt_rr" units="deg">Right right tilt angle</field>
+      <field type="float" name="tilt_rl" units="deg">Rear left tilt angle</field>
+      <field type="float" name="tilt_rr" units="deg">Rear right tilt angle</field>
     </message>
   </messages>
 </mavlink>
