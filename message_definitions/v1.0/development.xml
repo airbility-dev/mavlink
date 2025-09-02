@@ -606,13 +606,24 @@
       <field type="uint8_t" name="sysid_in_control">System ID of GCS MAVLink component in control (0: no GCS in control).</field>
       <field type="uint8_t" name="flags" enum="GCS_CONTROL_STATUS_FLAGS">Control status. For example, whether takeover is allowed, and whether this message instance defines the default controlling GCS for the whole system.</field>
     </message>
-    <message id="513" name="TILT_ANGLE">
+    <message id="513" name="TILT_ANGLE_SETPIONT">
       <description>Tilt angle command.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="float" name="tilt_fl" units="deg">Front left tilt angle</field>
       <field type="float" name="tilt_fr" units="deg">Front right tilt angle</field>
       <field type="float" name="tilt_rl" units="deg">Right left tilt angle</field>
       <field type="float" name="tilt_rr" units="deg">Right right tilt angle</field>
+    </message>
+    <message id="514" name="TILT_STATUS">
+      <description>Tilt status.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="uint16_t[4]" name="realtime_tick">Realtime tick data of dynamixel.</field>
+      <field type="uint8_t[4]" name="error_status">Error status</field>
+      <field type="float[4]" name="angle" units="deg">Actual tilt angle</field>
+      <field type="float[4]" name="angular_vel" units="deg/s">Actual tilt angular velocity</field>
+      <field type="float[4]" name  ="voltage" units="V">Input voltage</field>
+      <field type="int32_t[4]" name="current" units="mA">Input current</field>
+      <field type="float[4]" name="temperature" units="degC">Device temperature</field>
     </message>
   </messages>
 </mavlink>
