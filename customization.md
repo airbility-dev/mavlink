@@ -7,7 +7,6 @@
 |                     |     | float       | tilt_fr       | deg   |
 |                     |     | float       | tilt_rl       | deg   |
 |                     |     | float       | tilt_rr       | deg   |
-| ------------------- | --- | ----------  | ------------  | ----- |
 | TILT_STATUS         | 514 | uint32_t    | time_boot_ms  | ms    |
 |                     |     | uint16_t[4] | realtime_tick |       |
 |                     |     | uint8_t[4]  | error_status  |       |
