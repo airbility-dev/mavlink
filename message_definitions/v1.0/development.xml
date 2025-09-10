@@ -564,5 +564,13 @@
       <field type="int32_t[4]" name="current" units="mA">Input current</field>
       <field type="float[4]" name="temperature" units="degC">Device temperature</field>
     </message>
+    <message id="515" name="CONTROL_SURFACE_CMD">
+      <description>Control SurfaceCmd.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="float" name="left_aileron" units="deg">Left aileron command.</field>
+      <field type="float" name="right_aileron" units="deg">Right aileron command.</field>
+      <field type="float" name="left_ruddervator" units="deg">Left ruddervator command.</field>
+      <field type="float" name="right_ruddervator" units="deg">Right ruddervator command.</field>
+    </message>
   </messages>
 </mavlink>
