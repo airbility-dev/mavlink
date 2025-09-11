@@ -20,5 +20,3 @@
 |                     |     | float       | right_aileron     | deg   |
 |                     |     | float       | left_ruddervator  | deg   |
 |                     |     | float       | right_ruddervator | deg   |
-
-
