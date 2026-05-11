@@ -552,8 +552,8 @@
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="float" name="tilt_fl" units="deg">Front left tilt angle</field>
       <field type="float" name="tilt_fr" units="deg">Front right tilt angle</field>
-      <field type="float" name="tilt_rl" units="deg">Right left tilt angle</field>
-      <field type="float" name="tilt_rr" units="deg">Right right tilt angle</field>
+      <field type="float" name="tilt_rl" units="deg">Rear left tilt angle</field>
+      <field type="float" name="tilt_rr" units="deg">Rear right tilt angle</field>
     </message>
     <message id="514" name="TILT_STATUS">
       <description>Tilt status.</description>
@@ -562,7 +562,7 @@
       <field type="uint8_t[4]" name="error_status">Error status</field>
       <field type="float[4]" name="angle" units="deg">Actual tilt angle</field>
       <field type="float[4]" name="angular_vel" units="deg/s">Actual tilt angular velocity</field>
-      <field type="float[4]" name  ="voltage" units="V">Input voltage</field>
+      <field type="float[4]" name="voltage" units="V">Input voltage</field>
       <field type="int32_t[4]" name="current" units="mA">Input current</field>
       <field type="float[4]" name="temperature" units="degC">Device temperature</field>
     </message>
