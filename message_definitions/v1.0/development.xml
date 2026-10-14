@@ -628,5 +628,17 @@
       <field type="float" name="left_ruddervator" units="deg">Left ruddervator command.</field>
       <field type="float" name="right_ruddervator" units="deg">Right ruddervator command.</field>
     </message>
+    <message id="516" name="DUBINS_PATH">
+      <description>Dubins path the Approach mode steers along in fixed-wing, for display on the GCS. The start pose, turn radius and three segment lengths define the path exactly. Headings are measured from north toward east, so an R (right) turn increases the heading.</description>
+      <field type="uint64_t" name="time_usec" units="us">Timestamp (time since system boot).</field>
+      <field type="int32_t" name="lat" units="degE7">Latitude of the path start.</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude of the path start.</field>
+      <field type="float" name="alt" units="m">Altitude (MSL) the path is flown at.</field>
+      <field type="float" name="heading" units="rad">Heading at the path start.</field>
+      <field type="float" name="radius" units="m">Turn radius of both arcs.</field>
+      <field type="float[3]" name="segment_length" units="m">Length of each of the three segments, in path order.</field>
+      <field type="float" name="progress" units="m">Arc length of the vehicle's closest point on the path.</field>
+      <field type="uint8_t" name="path_type">Path word, segment directions in order: 0 none, 1 RSR, 2 LSL, 3 RSL, 4 LSR, 5 RLR, 6 LRL.</field>
+    </message>
   </messages>
 </mavlink>
