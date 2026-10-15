@@ -586,5 +586,11 @@
       <field type="float" name="progress" units="m">Arc length of the vehicle's closest point on the path.</field>
       <field type="uint8_t" name="path_type">Path word, segment directions in order: 0 none, 1 RSR, 2 LSL, 3 RSL, 4 LSR, 5 RLR, 6 LRL.</field>
     </message>
+    <message id="61000" name="TARGET_LOS_MAV">
+      <description>Telemetry copy of PX4 target_los_estimate, before guidance processing. Vectors use camera FRD axes: X forward along the optical boresight, Y right, Z down. Live perception input includes apparent motion from camera rotation. PX4 synthetic inject/virtual-target tests instead supply an already de-rotated rate in camera axes. This message does not command guidance or indicate that guidance is active.</description>
+      <field type="float[3]" name="los_unit">Unit direction towards the target in camera FRD axes, ordered X, Y, Z.</field>
+      <field type="float[3]" name="los_rate">Time derivative of los_unit in camera FRD axes, ordered X, Y, Z, in 1/s. This is a vector derivative, not the LOS angular-velocity vector.</field>
+      <field type="uint8_t" name="valid">1 if the input tracker reports a confirmed lock, otherwise 0. Receivers must also check freshness; an old valid sample is not a current lock.</field>
+    </message>
   </messages>
 </mavlink>
