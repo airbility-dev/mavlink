@@ -591,6 +591,8 @@
       <field type="float[3]" name="los_unit">Unit direction towards the target in camera FRD axes, ordered X, Y, Z.</field>
       <field type="float[3]" name="los_rate">Time derivative of los_unit in camera FRD axes, ordered X, Y, Z, in 1/s. This is a vector derivative, not the LOS angular-velocity vector.</field>
       <field type="uint8_t" name="valid">1 if the input tracker reports a confirmed lock, otherwise 0. Receivers must also check freshness; an old valid sample is not a current lock.</field>
+      <extensions/>
+      <field type="float" name="time_to_contact" units="s">Estimated time to contact at the input capture instant. Positive when available; NaN when input is invalid/stale or the estimate is unavailable/unreliable. Zero means unavailable from legacy senders. Availability is independent of LOS validity.</field>
     </message>
   </messages>
 </mavlink>
